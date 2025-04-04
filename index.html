@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tharani | About Me</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    nav {
+      background: #1e1e2f;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 120px 20px 80px;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    #home {
+      background: #e6f7ff; /* Light blue */
+    }
+
+    #about {
+      background: #fff0f5; /* Lavender blush */
+    }
+
+    #projects {
+      background: #f5ffe6; /* Pale green */
+    }
+
+    #contact {
+      background: #f0f0f0; /* Light grey */
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #1e1e2f;
+        width: 200px;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 800px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Tharani</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="section">
+    <h2>Welcome to My World!</h2>
+    <p>
+      Hi, I’m <strong>Tharani</strong> 👋<br><br>
+      I’m a passionate learner and tech enthusiast pursuing B.Tech in Artificial Intelligence and Data Science. My interests lie at the intersection of <strong>Data Analytics</strong>, <strong>Web Development</strong>, and <strong>Problem Solving</strong>. I love exploring real-world problems and building smart, efficient solutions using Python, SQL, and Power BI.<br><br>
+      This website is a little corner of the internet where you can get to know more about my background, the projects I’ve built, and how to reach me!
+    </p>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I’m currently in my pre-final year, and I’ve worked on a variety of hands-on projects — from flight delay predictions using weather data to interactive dashboards for telecom performance insights.<br><br>
+      I enjoy working in collaborative environments, learning new tools, and pushing myself to stay updated in tech. My short-term goal is to crack into a great product-based company, and long-term, I dream of launching my own startup.
+    </p>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Flight Delay Prediction</strong> – Used weather data and ML models to estimate delays.</li>
+      <li><strong>Telecom Network Dashboard</strong> – Built in Power BI to visualize outages and bandwidth usage.</li>
+      <li><strong>Password Generator</strong> – Python tool with customizable options for secure passwords.</li>
+      <li><strong>Contact Manager</strong> – A simple GUI app using Python's Tkinter module.</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: tharani@example.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/tharani" target="_blank">linkedin.com/in/tharani</a></p>
+    <p>GitHub: <a href="https://github.com/tharani" target="_blank">github.com/tharani</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tharani | Built with ❤️ using HTML, CSS, JS</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
